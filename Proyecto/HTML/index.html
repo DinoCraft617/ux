@@ -38,7 +38,7 @@
             var password = $("input[name='password']").val();
             
             $.ajax({
-                url: "/Proyecto/PHP/login.php",
+                url: "../PHP/login.php",
                 method: "POST",
                 data: {
                     user: user,
@@ -47,7 +47,7 @@
                 success: function(response) {
                     if (response.trim() === "success") {
                         // Si el login es exitoso, redirigir a home.html
-                        window.location.href = "/Proyecto/HTML/home.html";
+                        window.location.href = "../HTML/home.html";
                     } else {
                         // Mostrar alerta en caso de error
                         alert("Usuario o contraseña incorrectos.");
